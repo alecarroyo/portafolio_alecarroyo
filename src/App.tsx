@@ -1,5 +1,5 @@
 import ProjectCard from './ProjectCard'
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 
 const projects = [
@@ -7,20 +7,36 @@ const projects = [
     name: 'AsoWheel',
     description: 'Enterprise raffle system with participant, winner, and absentee management ',
     tags: ['React', 'Tailwind', 'Vite'],
-    image: '', // Add image path if available
+    image: 'https://i.postimg.cc/HnRDhLCD/Captura-de-pantalla-2026-02-12-191546.png', // Add image path if available
     liveDemoUrl: 'https://asowheel.netlify.app/',
     icon: 'open_in_new',
+    githubUrl: 'https://github.com/AlecArroyo/AsoWheel', // Replace with actual repo
   },
   {
     name: 'Puramente',
-    description: 'A scalable e-commerce platform with shopping cart and payment integration.',
-    tags: ['PHP', 'Javascript', 'Tailwind CSS'],
-    image: '',
-    liveDemoUrl: 'https://your-ecommerce-link.com',
+    description: 'An interactive web platform that reimagines traditional education through engaging gamified learning experiences for students.',
+    tags: ['Laravel', 'Typescript', 'Tailwind CSS'],
+    image: 'https://i.postimg.cc/pV7wxygM/Captura-de-pantalla-2025-10-06-100302.png',
+    liveDemoUrl: 'https://puramente.vercel.app/',
     icon: 'shopping_cart',
+    githubUrl: 'https://github.com/tallermulti2025-PM/PuraMente---Desarrollo', // Replace with actual repo
   },
-  
+  {
+    name: 'Lucha contra Don Mate',
+    description: 'A child-focused video game designed to help children learn math through creative and interactive gameplay. Developed as part of the Puramente project ',
+    tags: ['CSS', 'Javascript', 'Tailwind CSS'],
+    image: 'https://i.postimg.cc/DfMPMXR0/Captura-de-pantalla-2025-09-20-180239.png',
+    liveDemoUrl: 'https://juegomatematicapuramente.netlify.app/',
+    icon: 'shopping_cart',
+    githubUrl: 'https://github.com/AlecArroyo/JuegoMatePuramente', // Replace with actual repo
+  },
+];
 
+
+// Array escalable de links para la navbar
+const navLinks = [
+  { label: 'Home', href: '#home' },
+  { label: 'Projects', href: '#projects' },
 ];
 
 function App() {
@@ -42,36 +58,24 @@ function App() {
           <nav className="h-20 flex items-center justify-between px-4 sm:px-6 md:px-10 border-neutral-900 border-b">
             {/* Logo */}
             <div className="hidden md:flex items-center gap-4">
-              <a>
-                <button className="text-neutral-400 px-4 py-2 md:px-8 font-normal rounded-md text-xs md:text-base hover:bg-neutral-800 hover:font-semibold hover:text-white hover:border-yl-main  transition duration-300 ease-in-out hover:scale-105">
-                  Home
-                </button>
-              </a>
-              <a>
-                <button className="text-neutral-400 px-4 py-2 md:px-8 font-normal rounded-md text-xs md:text-base hover:bg-neutral-800 hover:font-semibold hover:text-white hover:border-yl-main  transition duration-300 ease-in-out hover:scale-105">
-                  Projects
-                </button>
-              </a>
-              <a>
-                <button className="text-neutral-400 px-4 py-2 md:px-8 font-normal rounded-md text-xs md:text-base hover:bg-neutral-800 hover:font-semibold hover:text-white hover:border-yl-main  transition duration-300 ease-in-out hover:scale-105">
-                  Contact
-                </button>
-              </a>
+              {navLinks.map((link) => (
+                <a key={link.label} href={link.href}>
+                  <button className="text-neutral-400 px-4 py-2 md:px-8 font-normal rounded-md text-xs md:text-base hover:bg-neutral-800 hover:font-semibold hover:text-teal-400 transition duration-300 ease-in-out">
+                    {link.label}
+                  </button>
+                </a>
+              ))}
             </div>
 
             {/* Botones Desktop */}
 
-
             <div className="flex text-2xl font-bold select-none">
-
+              {/* ...puedes agregar aquí otros elementos si es necesario... */}
             </div>
-
-
-
           </nav>
 
 
-          <section className='flex justify-between items-center my-22'>
+          <section className='flex justify-between items-center my-20'>
 
             {/* Texto */}
             <div className='px-15'>
@@ -79,7 +83,7 @@ function App() {
                 Hi. <span className='text-teal-400 font-Major-Mono'>Alec</span> Here!
               </h1>
 
-              <p className='text-neutral-300 text-lg md:text-sm font-light my-2 pr-20'>
+              <p className='text-neutral-300 text-lg md:text-smx font-light my-2 pr-20'>
                 Im a 21 year old software engineer from
                 <span className='text-neutral-200 font-medium'> Costa Rica </span>,
                 Full Stack Developer & UX/UI Designer. I build user friendly and scalable apps
@@ -88,8 +92,8 @@ function App() {
               {/* CONTENEDOR FLEX */}
               <div className="flex items-center gap-4 my-15">
 
-                <a href="/resume.pdf" download>
-                  <button className="flex items-center text-neutral-500 px-4 py-2 md:px-8 font-medium border border-neutral-400 rounded-md text-sm md:text-base hover:bg-neutral-800 hover:text-teal-400 hover:border-teal-400 transition duration-300 ease-in-out hover:scale-105">
+                <a href="/Alec_Arroyo_Software_Engineer_2026.pdf" download>
+                  <button className="flex items-center text-neutral-200 px-4 py-2 md:px-8 font-medium border border-neutral-400 rounded-md text-sm md:text-base hover:bg-neutral-950 hover:text-teal-400 hover:border-teal-400 transition duration-300 ease-in-out hover:scale-105">
                     Resume
                     <span className="material-symbols-outlined mx-2">
                       download
@@ -97,35 +101,63 @@ function App() {
                   </button>
                 </a>
 
-                <button title='Email' className="flex items-center text-neutral-500 px-4 py-2 md:px-8 font-medium text-sm md:text-base hover:text-neutral-100 transition duration-300 ease-in-out hover:scale-105">
-                  <span className="material-symbols-outlined mx-2">
-                    mail
-                  </span>
+                <div className='flex items-center gap-4 my-0 p-0 mx-2'>
+                  <a
+                    href="https://www.linkedin.com/in/alec-arroyo-badilla-developer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedin className='text-neutral-500 text-3xl hover:text-neutral-100 transition duration-300 ease-in-out hover:scale-105' />
+                  </a>
+                  <a title='Email' href='mailto:alec.arroyo@ucr.ac.' className="flex items-center text-neutral-500 font-medium text-sm md:text-base hover:text-neutral-100 transition duration-300 ease-in-out hover:scale-105">
+                    <span className="material-symbols-outlined mx-2">
+                      mail
+                    </span>
+                  </a>
 
-                </button>
-                <FaGithub className='text-neutral-500 text-3xl hover:text-neutral-100 transition duration-300 ease-in-out hover:scale-105' />
+
+
+                </div>
+
+
               </div>
             </div>
 
             {/* Placeholder imagen */}
             <div className='hidden md:flex items-center justify-center mx-1.5'>
-              <div className='w-84 h-84 rounded-2xl bg-neutral-800 border border-neutral-700 flex items-center justify-center rounded-full'>
-                <span className='text-neutral-500 text-sm rounded-full'>
-                  <img className='w-full h-full object-cover aspect-square rounded-full'
-                    src="https://i.postimg.cc/rpFtnRPk/53646.png"
-                    alt="" />
-                </span>
+              <div className='w-84 h-84 rounded-full border border-neutral-700 relative group overflow-hidden hover:scale-125 transform duration-300 ease-in-out'>
+
+                {/* Imagen */}
+                <img
+                  className='w-full h-full object-cover aspect-square rounded-full transition duration-300 ease-in-out group-hover:blur-3xl '
+                  src="https://i.postimg.cc/rpFtnRPk/53646.png"
+                  alt=""
+                />
+
+                {/* Overlay texto */}
+                <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300'>
+                  <div>
+                    <p className='text-white text-center px-6 text-md font-medium'>
+                      About Me
+                    </p>
+                    <p className='text-white text-center px-6 text-xs font-light'>
+                      Since i was a kid i l've loved everything related to creating and designing. I always give my best in every project im working on.
+                    </p>
+                  </div>
+
+                </div>
+
               </div>
             </div>
 
           </section>
 
-          <section className='py-10'>
+          <section id="projects" className='py-10'>
 
-            <div className="flex items-center gap-3 mb-10 text-neutral-300 font-light text-3xl md:text-2xl">
+            <div className="flex items-center gap-3 mb-10 text-neutral-200 font-normal text-3xl md:text-2xl">
               <span>Featured Projects</span>
               <span className="material-symbols-outlined text-neutral-400">
-                kid_star
+                star
               </span>
             </div>
 
@@ -139,6 +171,7 @@ function App() {
                   image={project.image}
                   liveDemoUrl={project.liveDemoUrl}
                   icon={project.icon}
+                  githubUrl={project.githubUrl}
                 />
               ))}
             </div>

@@ -1,3 +1,6 @@
+import { FaGithub } from "react-icons/fa";
+
+
 type ProjectCardProps = {
   image?: string;
   name: string;
@@ -5,15 +8,16 @@ type ProjectCardProps = {
   tags: string[];
   liveDemoUrl?: string;
   icon?: string;
+  githubUrl?: string;
 };
 
-function ProjectCard({ image, name, description, tags, liveDemoUrl, icon }: ProjectCardProps) {
+function ProjectCard({ image, name, description, tags, liveDemoUrl, icon, githubUrl }: ProjectCardProps) {
   return (
-    <div className="bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-500 transition duration-300 hover:scale-[1.02]">
+    <div className="bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-500 transition duration-300 hover:scale-[1.02] group">
       {/* Imagen */}
       <div className="h-40 bg-neutral-800 flex items-center justify-center">
         {image ? (
-          <img src={image} alt={name} className="object-cover h-full w-full" />
+          <img src={image} alt={name} className="object-cover h-full w-full brightness-40 transition duration-1000 ease-in-out group-hover:brightness-100" />
         ) : (
           <span className="text-neutral-500 text-sm">Image</span>
         )}
@@ -48,9 +52,13 @@ function ProjectCard({ image, name, description, tags, liveDemoUrl, icon }: Proj
             <span className="text-sm text-neutral-500">No Demo</span>
           )}
 
-          <span className="material-symbols-outlined text-neutral-400 hover:text-white cursor-pointer">
-            {icon || 'open_in_new'}
-          </span>
+          {githubUrl ? (
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+              <FaGithub className='text-neutral-500 text-3xl hover:text-neutral-100 transition duration-300 ease-in-out hover:scale-105' />
+            </a>
+          ) : (
+            <FaGithub className='text-neutral-500 text-3xl hover:text-neutral-100 transition duration-300 ease-in-out hover:scale-105' />
+          )}
         </div>
       </div>
     </div>
