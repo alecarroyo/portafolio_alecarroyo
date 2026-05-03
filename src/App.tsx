@@ -170,7 +170,6 @@ function App() {
                   tags={project.tags}
                   image={project.image}
                   liveDemoUrl={project.liveDemoUrl}
-                  icon={project.icon}
                   githubUrl={project.githubUrl}
                 />
               ))}

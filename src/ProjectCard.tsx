@@ -7,11 +7,10 @@ type ProjectCardProps = {
   description: string;
   tags: string[];
   liveDemoUrl?: string;
-  icon?: string;
   githubUrl?: string;
 };
 
-function ProjectCard({ image, name, description, tags, liveDemoUrl, icon, githubUrl }: ProjectCardProps) {
+function ProjectCard({ image, name, description, tags, liveDemoUrl, githubUrl }: ProjectCardProps) {
   return (
     <div className="bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-500 transition duration-300 hover:scale-[1.02] group">
       {/* Imagen */}
