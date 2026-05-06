@@ -47,12 +47,13 @@ function App() {
 
         {/* --- EFECTO DE LUZ (EL RESPLANDOR) --- */}
         {/* Luz blanca/suave en la esquina superior derecha (como en la foto) */}
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-neutral-900 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-neutral-800 rounded-full blur-[120px] pointer-events-none"></div>
 
         {/* Luz turquesa opcional en el lado izquierdo para dar contraste con tu color de marca */}
-        <div className="absolute top-1/2 -left-34 w-80 h-80 bg-teal-950/55 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute top-1/2 -left-34 w-80 h-80 bg-teal-950/40 rounded-full blur-[100px] pointer-events-none"></div>
         {/* ------------------------------------- */}
-
+        <div className="absolute top-0 -left-55 w-80 h-80 bg-amber-800/40 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute top-0 left-1/2 w-80 h-80 bg-teal-800/40 rounded-full blur-[100px] pointer-events-none -translate-x-1/2"></div>
         <div className="max-w-5xl mx-auto relative z-10"> {/* z-10 para estar sobre la luz */}
 
           <nav className="h-20 flex items-center justify-between px-4 sm:px-6 md:px-10 border-neutral-900 border-b">
@@ -125,17 +126,17 @@ function App() {
 
             {/* Placeholder imagen */}
             <div className='hidden md:flex items-center justify-center mx-1.5'>
-              <div className='w-84 h-84 rounded-full border border-neutral-700 relative group overflow-hidden hover:scale-125 transform duration-300 ease-in-out'>
+              <div className='w-84 h-84 rounded-4xl border border-neutral-700 relative group overflow-hidden hover:scale-125 transform duration-300 ease-in-out'>
 
                 {/* Imagen */}
                 <img
-                  className='w-full h-full object-cover aspect-square rounded-full transition duration-300 ease-in-out group-hover:blur-3xl '
-                  src="https://i.postimg.cc/rpFtnRPk/53646.png"
+                  className='w-full h-full object-cover aspect-square rounded-lg transition duration-300 ease-in-out group-hover:blur-3xl '
+                  src="https://i.postimg.cc/sD3J5x4N/53644.png"
                   alt=""
                 />
 
                 {/* Overlay texto */}
-                <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300'>
+                <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-1000'>
                   <div>
                     <p className='text-white text-center px-6 text-md font-medium'>
                       About Me
