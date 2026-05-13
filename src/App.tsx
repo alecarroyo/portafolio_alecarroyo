@@ -14,7 +14,7 @@ const projects = [
   },
   {
     name: 'Puramente',
-    description: 'An interactive web platform that reimagines traditional education through engaging gamified learning experiences for students.',
+    description: 'An interactive web platform that reimagines traditional education through engaging gamified learning experiences for students. Credentials: alecfer1204@gmail.com Password:Alec1204!',
     tags: ['Laravel', 'Typescript', 'Tailwind CSS'],
     image: 'https://i.postimg.cc/pV7wxygM/Captura-de-pantalla-2025-10-06-100302.png',
     liveDemoUrl: 'https://puramente.vercel.app/',
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: 'Lucha contra Don Mate',
-    description: 'A child-focused video game designed to help children learn math through creative and interactive gameplay. Developed as part of the Puramente project Credentials: alecfer1204@gmail.com Password:Alec1204!',
+    description: 'A child-focused video game designed to help children learn math through creative and interactive gameplay. Developed as part of the Puramente project ',
     tags: ['CSS', 'Javascript', 'Tailwind CSS'],
     image: 'https://i.postimg.cc/DfMPMXR0/Captura-de-pantalla-2025-09-20-180239.png',
     liveDemoUrl: 'https://juegomatematicapuramente.netlify.app/',
