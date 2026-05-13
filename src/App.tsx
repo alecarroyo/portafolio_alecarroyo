@@ -6,7 +6,7 @@ const projects = [
   {
     name: 'AsoWheel',
     description: 'Enterprise raffle system with participant, winner, and absentee management ',
-    tags: ['React', 'Tailwind', 'Vite'],
+    tags: ['React', 'C#', 'ASP.NET','JWT auth'],
     image: 'https://i.postimg.cc/HnRDhLCD/Captura-de-pantalla-2026-02-12-191546.png', // Add image path if available
     liveDemoUrl: 'https://asowheel.netlify.app/',
     icon: 'open_in_new',
@@ -86,8 +86,8 @@ function App() {
 
               <p className='text-neutral-300 text-lg md:text-smx font-light my-2 pr-20'>
                 Im a 21 year old software engineer from
-                <span className='text-neutral-200 font-medium'> Costa Rica </span>,
-                Full Stack Developer & UX/UI Designer. I build user friendly and scalable apps
+                <span className='text-neutral-200 font-medium'> Costa Rica </span>.
+                Im Full Stack Developer & UX/UI Designer. I like builing user friendly and scalable apps using backend technologies like Laravel, ASP.NET, and React.
               </p>
 
               {/* CONTENEDOR FLEX */}
