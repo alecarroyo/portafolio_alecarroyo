@@ -22,13 +22,13 @@ const projects = [
     githubUrl: 'https://github.com/tallermulti2025-PM/PuraMente---Desarrollo', // Replace with actual repo
   },
   {
-    name: 'Lucha contra Don Mate',
-    description: 'A child-focused video game designed to help children learn math through creative and interactive gameplay. Developed as part of the Puramente project ',
-    tags: ['CSS', 'Javascript', 'Tailwind CSS'],
-    image: 'https://i.postimg.cc/DfMPMXR0/Captura-de-pantalla-2025-09-20-180239.png',
-    liveDemoUrl: 'https://juegomatematicapuramente.netlify.app/',
+    name: 'Community Service Activity Tracking System',
+    description: 'A web-based platform for recording, managing, and tracking community service activities through digital logbooks.',
+    tags: ['MongoDB', 'Azure', 'Axios','ASP.NET'],
+    image: 'https://i.postimg.cc/P5WVnXD4/Captura-de-pantalla-2026-06-03-115649.png',
+    liveDemoUrl: 'https://sitematizacion-tcu-782.netlify.app/',
     icon: 'shopping_cart',
-    githubUrl: 'https://github.com/AlecArroyo/JuegoMatePuramente', // Replace with actual repo
+    githubUrl: 'https://github.com/AlecArroyo/Sistematizacion_TCU', // Replace with actual repo
   },
 ];
 
@@ -87,7 +87,7 @@ function App() {
               <p className='text-neutral-300 text-lg md:text-smx font-light my-2 pr-20'>
                 Im a 21 year old software engineer from
                 <span className='text-neutral-200 font-medium'> Costa Rica </span>.
-                Im Full Stack Developer & UX/UI Designer. I like builing user friendly and scalable apps using backend technologies like Laravel, ASP.NET, and React.
+                Im Full Stack Developer & UX/UI Designer. I like builing user friendly and scalable apps using backend technologies like Laravel, ASP.NET, MongoDB and React.
               </p>
 
               {/* CONTENEDOR FLEX */}
